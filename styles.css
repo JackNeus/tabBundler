@@ -15,7 +15,8 @@ textarea#hidden {
 
 input {
     display: block;
-    height:40px; 
+    height:55px; 
+    width:400px;
     padding: 5px 8px;
     margin: 0 auto;
     margin-bottom: 10px;
@@ -27,14 +28,14 @@ input {
 button {
     display: block;
     background: #5ae;
-    width: 100px;
-    height: 40px;
+    width: 140px;
+    height: 45px;
     border-radius: 10px;
     border-color: transparent;
     margin: 0 auto;
     cursor: pointer;
     color: white;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 button:hover {
