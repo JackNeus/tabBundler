@@ -26,7 +26,7 @@ input {
 
 button {
     display: block;
-    background: #6bf;
+    background: #5ae;
     width: 100px;
     height: 40px;
     border-radius: 10px;
@@ -35,6 +35,10 @@ button {
     cursor: pointer;
     color: white;
     font-size: 16px;
+}
+
+button:hover {
+    opacity: 0.85;
 }
 
 #urls {
