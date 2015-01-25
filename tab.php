@@ -14,17 +14,15 @@ if(array_key_exists("data", $_REQUEST)){
 	$data = str_replace(" ", "", $data);
 	$urls = explode(",", $data);
 	$flag = count($urls);
-	echo $flag;
-	echo "<br>";
+	//$flag = 1
+	echo "Loading...";
 	foreach($urls as $url){
-		echo ":".$url.":";
-		echo "<br>";
 		if($flag > 1){
 			$script = "<script type=\"text/javascript\">window.open('".$url."','_blank');</script>";
 			echo $script;
 			$flag -= 1;
 		} 
-		else{ //because we can't close tab bundler
+		else{ //because we can't actually close tab bundler
 			$script = "<script type=\"text/javascript\">window.location.href=\"".$url."\";</script>";
 			echo $script;
 		}
@@ -32,12 +30,14 @@ if(array_key_exists("data", $_REQUEST)){
 }
 else if(array_key_exists("url", $_REQUEST)){
 	$data = base64_encode($_REQUEST["url"]);
-	$url = "tab.php?data=".$data;
-	header("Location: ".$url);
+	$urlprefix = "http://localhost/tabBundler/";
+	$url = "tab.php?data=".$data;			
+	echo "Your tabBundler link: ";
+	echo "<a href=\"".$url."\">".$urlprefix.$url."<a>";
 }
-else{
+else{ 
 	echo "Enter a comma separated list of URLS:<br>";
-	echo "<form action=\"tab.php\"><textarea name=\"url\"></textarea><br>";
+	echo "<form action=\"tab.php\"><textarea name=\"url\" cols=\"50\" rows=\"10\"></textarea><br>";
 	echo "<button type=\"submit\">Bundle!</button></form>";
 }
 
