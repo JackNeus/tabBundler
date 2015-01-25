@@ -30,16 +30,16 @@ if(array_key_exists("data", $_REQUEST)){
 else if(array_key_exists("url", $_REQUEST)){
 	$data = base64_encode($_REQUEST["url"]);
 	$urlprefix = "http://localhost/tabBundler/";
-	$url = "tab.php?data=".$data;			
+	$url = "tab.php?data=".$data;
 	echo "Your tabBundler link: ";
 	echo "<a href=\"".$url."\">".$urlprefix.$url."<a>";
 }
 else{
     echo "<h1 class=\"title\">TabBundler</h1>";
 	echo "Enter a comma separated list of URLS:<br>";
+    echo "<ul id=\"urls\"><li><input></input></li></ul>";
+    echo "<button id=\"new-url\">Add URL</button>";
 	echo "<form action=\"tab.php\"><textarea class=\"hidden\" name=\"url\"></textarea><br>";
-    echo "<ul class=\"urls\"><li><input></input></li></ul>";
-    echo "<button class=\"new-url\">Add URL</button>";
 	echo "<button type=\"submit\">Bundle!</button></form>";
 }
 
@@ -49,5 +49,11 @@ else{
 </html>
 
 <script type="text/javascript">
-
+    var newURL = document.getElementById("new-url");
+    newURL.addEventListener("click", function() {
+        var urls = document.getElementById("urls");
+        var li = document.createElement('li');
+        li.innerHTML += "<input />";
+        urls.appendChild(li);
+    });
 </script>
