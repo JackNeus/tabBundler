@@ -4,6 +4,7 @@ body {
 
 .title {
     font-size: 144px;
+    text-align: center;
 }
 
 textarea#hidden {
@@ -21,3 +22,7 @@ button {
 #urls li {
     list-style: none;
 }
+
+.info {
+    text-align: center;
+    font-size: 24px;
