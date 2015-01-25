@@ -68,7 +68,7 @@ else{
         for (var i = 0; i < children.length; i++) {
             var tempURL = children[i].children[0].value;
             if (!(tempURL === "")) {
-                hidden.innerHTML += ;
+                hidden.innerHTML += tempURL;
                 if (i < children.length - 1) {
                     hidden.innerHTML += ",";
                 }
