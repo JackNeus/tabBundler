@@ -66,9 +66,12 @@ else{
         var hidden = document.getElementById("hidden");
         var children = urls.children;
         for (var i = 0; i < children.length; i++) {
-            hidden.innerHTML += children[i].children[0].value;
-            if (i < children.length - 1) {
-                hidden.innerHTML += ",";
+            var tempURL = children[i].children[0].value;
+            if (!(tempURL === "")) {
+                hidden.innerHTML += ;
+                if (i < children.length - 1) {
+                    hidden.innerHTML += ",";
+                }
             }
         }
     });
