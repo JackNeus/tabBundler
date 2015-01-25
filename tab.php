@@ -11,20 +11,17 @@ if(array_key_exists("data", $_REQUEST)){
 	$data = base64_decode($_REQUEST["data"]);
 	$urls = explode(",", $data);
 	$flag = count($urls);
-	echo $flag;
 	foreach($urls as $url){
 		echo $url;
 		echo "<br>";
 		if($flag > 1){
 			echo "<script type=\"text/javascript\">window.open('".$url."','_blank');</script>";
 			$flag -= 1;
-		}
-		else{
+		} 
+		else{ //because we can't close tab bundler
 			echo "<script type=\"text/javascript\">window.location.href='".$url."';</script>";
 		}
 	}
-	echo $flag;
-	//echo "<script type=\"text/javascript\">window.open('', '_self', '');window.close();</script>";
 }
 else if(array_key_exists("url", $_REQUEST)){
 	$data = base64_encode($_REQUEST["url"]);
