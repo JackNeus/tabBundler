@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Tab Bundler</title>
+	<title>tabBundler</title>
     <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
@@ -31,11 +31,11 @@ else if(array_key_exists("url", $_REQUEST)){
 	$data = base64_encode($_REQUEST["url"]);
 	$urlprefix = "http://localhost/tabBundler/";
 	$url = "tab.php?data=".$data;
-	echo "Your tabBundler link: ";
-	echo "<a href=\"".$url."\">".$urlprefix.$url."<a>";
+	echo "<h2 id=\"your_link\">Your tabBundler link:</h2>";
+	echo "<p id=\"bundle_url\"><a href=\"".$url."\">".$urlprefix.$url."<a></p>";
 }
 else{
-    echo "<h1 class=\"title\">TabBundler</h1>";
+    echo "<h1 class=\"title\">tabBundler</h1>";
 	echo "<p id=\"enter\">Enter your URLs below</p>";
     echo "<ul id=\"urls\"><li><input placeholder=\"http://www.google.com\"></input></li></ul>";
     echo "<button id=\"new-url\">Add URL</button>";
