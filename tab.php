@@ -36,11 +36,11 @@ else if(array_key_exists("url", $_REQUEST)){
 }
 else{
     echo "<h1 class=\"title\">TabBundler</h1>";
-	echo "Enter a comma separated list of URLS:<br>";
+	echo "Enter your URLs below";
     echo "<ul id=\"urls\"><li><input></input></li></ul>";
     echo "<button id=\"new-url\">Add URL</button>";
-	echo "<form action=\"tab.php\"><textarea class=\"hidden\" name=\"url\"></textarea><br>";
-	echo "<button type=\"submit\">Bundle!</button></form>";
+	echo "<form action=\"tab.php\"><textarea id=\"hidden\" name=\"url\"></textarea><br>";
+	echo "<button type=\"submit\" id=\"submit\">Bundle!</button></form>";
 }
 
 ?>
@@ -55,5 +55,20 @@ else{
         var li = document.createElement('li');
         li.innerHTML += "<input />";
         urls.appendChild(li);
+    });
+</script>
+
+<script type="text/javascript">
+    var bundle = document.getElementById("submit");
+    bundle.addEventListener("click", function() {
+        var urls = document.getElementById("urls");
+        var hidden = document.getElementById("hidden");
+        var children = urls.children;
+        for (var i = 0; i < children.length; i++) {
+            hidden.innerHTML += children[i].children[0].value;
+            if (i < children.length - 1) {
+                hidden.innerHTML += ",";
+            }
+        }
     });
 </script>

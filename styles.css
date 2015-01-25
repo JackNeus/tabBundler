@@ -6,7 +6,7 @@ body {
     font-size: 144px;
 }
 
-textarea.hidden {
+textarea#hidden {
     display: none;
 }
 
