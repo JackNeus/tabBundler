@@ -9,23 +9,31 @@
 <?php
 if(array_key_exists("data", $_REQUEST)){
 	$data = base64_decode($_REQUEST["data"]);
+	$data = str_replace("\n", "", $data);
+	$data = str_replace("\r", "", $data);
+	$data = str_replace(" ", "", $data);
 	$urls = explode(",", $data);
 	$flag = count($urls);
+	echo $flag;
+	echo "<br>";
 	foreach($urls as $url){
-		echo $url;
+		echo ":".$url.":";
 		echo "<br>";
 		if($flag > 1){
-			echo "<script type=\"text/javascript\">window.open('".$url."','_blank');</script>";
+			$script = "<script type=\"text/javascript\">window.open('".$url."','_blank');</script>";
+			echo $script;
 			$flag -= 1;
 		} 
 		else{ //because we can't close tab bundler
-			echo "<script type=\"text/javascript\">window.location.href='".$url."';</script>";
+			$script = "<script type=\"text/javascript\">window.location.href=\"".$url."\";</script>";
+			echo $script;
 		}
 	}
 }
 else if(array_key_exists("url", $_REQUEST)){
 	$data = base64_encode($_REQUEST["url"]);
-	header("Location: tab.php?data=" . $data);
+	$url = "tab.php?data=".$data;
+	header("Location: ".$url);
 }
 else{
 	echo "Enter a comma separated list of URLS:<br>";
