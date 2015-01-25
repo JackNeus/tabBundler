@@ -36,14 +36,16 @@ else if(array_key_exists("url", $_REQUEST)){
 }
 else{
     echo "<h1 class=\"title\">TabBundler</h1>";
-	echo "Enter a comma separated list of URLS:<br>";
-	echo "<form action=\"tab.php\"><textarea class=\"hidden\" name=\"url\"></textarea><br>";
+    echo "<p class=\"info\">Organize your favorite tabs like never before.</p>";
+    echo "Enter a comma separated list of URLS:<br>";
+    echo "<form action=\"tab.php\"><textarea class=\"hidden\" name=\"url\"></textarea><br>";
     echo "<ul class=\"urls\"><li><input></input></li></ul>";
     echo "<button class=\"new-url\">Add URL</button>";
-	echo "<button type=\"submit\">Bundle!</button></form>";
+    echo "<button type=\"submit\">Bundle!</button></form>";
 }
 
 ?>
+   
 
 </body>
 </html>
