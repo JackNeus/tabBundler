@@ -19,7 +19,7 @@ button {
     display: block;
 }
 
-.urls li {
+#urls li {
     list-style: none;
 }
 
