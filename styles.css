@@ -13,10 +13,24 @@ textarea#hidden {
 
 input {
     display: block;
+    height:40px; 
+    padding: 5px 8px;
+    margin: 0 auto;
 }
 
 button {
     display: block;
+    background: #3498db;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    border-color: transparent;
+    margin: 0 auto;
+}
+
+#urls {
+    padding: 0;
+    margin: 0;
 }
 
 #urls li {
@@ -26,3 +40,8 @@ button {
 .info {
     text-align: center;
     font-size: 24px;
+}
+
+p#enter {
+    text-align: center;
+}
