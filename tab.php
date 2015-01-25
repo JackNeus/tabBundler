@@ -37,7 +37,7 @@ else if(array_key_exists("url", $_REQUEST)){
 else{
     echo "<h1 class=\"title\">TabBundler</h1>";
 	echo "<p id=\"enter\">Enter your URLs below</p>";
-    echo "<ul id=\"urls\"><li><input></input></li></ul>";
+    echo "<ul id=\"urls\"><li><input placeholder=\"http://www.google.com\"></input></li></ul>";
     echo "<button id=\"new-url\">Add URL</button>";
 	echo "<form action=\"tab.php\"><textarea id=\"hidden\" name=\"url\"></textarea>";
 	echo "<button type=\"submit\" id=\"submit\">Bundle!</button></form>";
