@@ -1,0 +1,23 @@
+body {
+    font-family: Arial;
+}
+
+.title {
+    font-size: 144px;
+}
+
+textarea.hidden {
+    display: none;
+}
+
+input {
+    display: block;
+}
+
+button {
+    display: block;
+}
+
+.urls li {
+    list-style: none;
+}
