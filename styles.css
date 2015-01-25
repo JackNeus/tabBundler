@@ -5,6 +5,8 @@ body {
 .title {
     font-size: 144px;
     text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 textarea#hidden {
@@ -16,25 +18,37 @@ input {
     height:40px; 
     padding: 5px 8px;
     margin: 0 auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border-color: black;
+    border-width: 1px;
 }
 
 button {
     display: block;
-    background: #3498db;
+    background: #6bf;
     width: 100px;
     height: 40px;
     border-radius: 10px;
     border-color: transparent;
     margin: 0 auto;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
 }
 
 #urls {
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
 }
 
 #urls li {
     list-style: none;
+}
+
+#new-url {
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .info {

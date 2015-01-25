@@ -39,7 +39,7 @@ else{
 	echo "<p id=\"enter\">Enter your URLs below</p>";
     echo "<ul id=\"urls\"><li><input></input></li></ul>";
     echo "<button id=\"new-url\">Add URL</button>";
-	echo "<form action=\"tab.php\"><textarea id=\"hidden\" name=\"url\"></textarea><br>";
+	echo "<form action=\"tab.php\"><textarea id=\"hidden\" name=\"url\"></textarea>";
 	echo "<button type=\"submit\" id=\"submit\">Bundle!</button></form>";
 }
 
